@@ -1,0 +1,71 @@
+[user]
+	name = Jack Dempsey
+	email = jack.dempsey@gmail.com
+[color]
+	ui = auto
+[pack]
+	threads = 0
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	lc = log ORIG_HEAD.. --stat --no-merges
+	sb = show-branch
+  mg = merge
+	wu = log origin/master..
+  pop = reset head^
+  squish = commit -a --amend -C HEAD
+  squeeze = commit --amend -C HEAD
+	wup = log -p origin/master..
+  save = stash && git-stash apply
+  onup = !zsh ~/bin/rebase-branches
+  cy = cherry
+	last = log -1 HEAD
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[core]
+	excludesfile = /Users/jack/.gitignore
+
+[apply]
+  whitespace = strip
+
+[diff]
+  color = auto
+  rename = copy
+
+[pager]
+    color = true
+
+[status]
+    color = auto
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = green reverse
+  local = green
+  remote = red
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = green
+  changed = red
+  untracked = cyan
+
+[github]
+	user = jackdempsey
+	token = secret
+[merge]
+	summary = true
+
+[push]
+  default = current
+
